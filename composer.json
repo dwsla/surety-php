@@ -1,0 +1,29 @@
+{
+    "name": "startupdevs/surety",
+    "description": "Surety PHP SDK",
+    "license": "MIT",
+    "keywords": [
+        "surety"
+    ],
+    "authors": [
+        {
+            "name": "Emerson Carvalho",
+            "email": "emerson.broga@gmail.com"
+        }
+    ],
+    "homepage": "http://dws.la/",
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "config": {
+        "bin-dir": "scripts"
+    },
+    "autoload": {
+        "psr-4": {
+            "StartupDevs\\Surety\\": "src"
+        }
+    }
+}
