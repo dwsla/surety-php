@@ -1,10 +1,10 @@
 <?php
 
-namespace StartupDevs\Surety\Model;
+namespace Dws\Surety\Model;
 
-use \StartupDevs\Surety\Model\Surety;
-use \StartupDevs\Surety\Model\PreviousToken;
-use \StartupDevs\Surety\Repository\SuretyModelInterface;
+use \Dws\Surety\Model\Surety;
+use \Dws\Surety\Model\PreviousToken;
+use \Dws\Surety\Repository\SuretyModelInterface;
 
 class Show extends Surety implements SuretyModelInterface
 {

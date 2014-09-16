@@ -1,6 +1,6 @@
 <?php
 
-namespace StartupDevs\Surety;
+namespace Dws\Surety;
 
 class SuretyException extends \Exception
 {

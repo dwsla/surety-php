@@ -1,6 +1,6 @@
 <?php
 
-namespace StartupDevs\Surety\Repository;
+namespace Dws\Surety\Repository;
 
 interface SuretyModelInterface
 {

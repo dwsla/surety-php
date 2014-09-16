@@ -1,9 +1,9 @@
 <?php
 
-namespace StartupDevs\Surety;
+namespace Dws\Surety;
 
-use StartupDevs\Surety\SuretyInterface;
-use StartupDevs\Surety\SuretyException;
+use Dws\Surety\SuretyInterface;
+use Dws\Surety\SuretyException;
 use DOMDocument;
 
 class Surety implements SuretyInterface

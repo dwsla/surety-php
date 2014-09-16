@@ -1,9 +1,9 @@
 <?php
 
-namespace StartupDevs\Surety\Model;
+namespace Dws\Surety\Model;
 
-use \StartupDevs\Surety\Model\Surety;
-use \StartupDevs\Surety\Repository\SuretyModelInterface;
+use \Dws\Surety\Model\Surety;
+use \Dws\Surety\Repository\SuretyModelInterface;
 
 class Timestamp extends Surety implements SuretyModelInterface
 {

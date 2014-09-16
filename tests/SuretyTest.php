@@ -1,6 +1,6 @@
 <?php
 
-use StartupDevs\Surety\Surety;
+use Dws\Surety\Surety;
 
 class SuretyTest extends PHPUnit_Framework_TestCase
 {
@@ -15,7 +15,7 @@ class SuretyTest extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @expectedException StartupDevs\Surety\SuretyException
+     * @expectedException Dws\Surety\SuretyException
      */
     public function testCheckFilePathException()
     {

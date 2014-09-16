@@ -10,8 +10,8 @@ This library is using Python to make the calls on the API. (python is required t
 
 require_once 'vendor/autoload.php';
 
-use StartupDevs\Surety\SuretyPython as Surety;
-use StartupDevs\Surety\SuretyException as SuretyException;
+use Dws\Surety\SuretyPython as Surety;
+use Dws\Surety\SuretyException as SuretyException;
 
 try{
 
@@ -54,10 +54,10 @@ try{
 
 	$timestamp = $surety->timestamp($file);
 
-	// it will return a StartupDevs\Surety\Model\Timestamp 
-	// or throw an StartupDevs\Surety\SuretyException
+	// it will return a Dws\Surety\Model\Timestamp 
+	// or throw an Dws\Surety\SuretyException
 
-	// the StartupDevs\Surety\Model\Timestamp has the following properties
+	// the Dws\Surety\Model\Timestamp has the following properties
 	echo $timestamp->url; # the url string 
     echo $timestamp->asn1_token; # the asn1_token string 
     echo $timestamp->timestamp; # the timestamp string 
@@ -82,10 +82,10 @@ try{
 
 	$verify = $surety->verify($file);
 
-	// it will return a StartupDevs\Surety\Model\Verify 
-	// or throw an StartupDevs\Surety\SuretyException
+	// it will return a Dws\Surety\Model\Verify 
+	// or throw an Dws\Surety\SuretyException
 
-	// the StartupDevs\Surety\Model\Verify has the following properties
+	// the Dws\Surety\Model\Verify has the following properties
 	echo $verify->url; # the url string 
     echo $verify->decode_url; # the decode_url string 
     echo $verify->asn1_token; # the asn1_token string 
@@ -109,10 +109,10 @@ try{
 
 	$renew = $surety->renew($file);
 
-	// it will return a StartupDevs\Surety\Model\Renew 
-	// or throw an StartupDevs\Surety\SuretyException
+	// it will return a Dws\Surety\Model\Renew 
+	// or throw an Dws\Surety\SuretyException
 
-	// the StartupDevs\Surety\Model\Renew has the following properties
+	// the Dws\Surety\Model\Renew has the following properties
 	echo $renew->url; # the url string 
     echo $renew->decode_url; # the decode_url string 
     echo $renew->json; # the json string with the full response 
@@ -138,10 +138,10 @@ try{
 
 	$show = $surety->show($file);
 
-	// it will return a StartupDevs\Surety\Model\Show 
-	// or throw an StartupDevs\Surety\SuretyException
+	// it will return a Dws\Surety\Model\Show 
+	// or throw an Dws\Surety\SuretyException
 
-	// the StartupDevs\Surety\Model\Show has the following properties
+	// the Dws\Surety\Model\Show has the following properties
 	echo $show->url; # the url string 
     echo $show->asn1_token; # the asn1_token string 
     echo $show->timestamp; # the timestamp string 
@@ -152,9 +152,9 @@ try{
     echo $show->RIPEMD160; # the RIPEMD160 string 
     echo $show->json; # the json string with the full response 
 
-    // the StartupDevs\Surety\Model\Show also have the getPreviousToken method
+    // the Dws\Surety\Model\Show also have the getPreviousToken method
     // each key of the previous token array contains a 
-    // StartupDevs\Surety\Model\PreviousToken
+    // Dws\Surety\Model\PreviousToken
 
     $show->getPreviousToken(); # the array with all previous token
 
@@ -162,7 +162,7 @@ try{
     $level = 0;
     $previousToken = $show->getPreviousToken( $level );
 
-    // the StartupDevs\Surety\Model\PreviousToken has the following properties
+    // the Dws\Surety\Model\PreviousToken has the following properties
 	echo $previousToken->asn1_token; # the asn1_token string 
     echo $previousToken->timestamp; # the timestamp string 
     echo $previousToken->serial_number; # the serial_number string 

@@ -1,5 +1,5 @@
 {
-    "name": "startupdevs/surety",
+    "name": "dwsla/surety-php",
     "description": "Surety PHP SDK",
     "license": "MIT",
     "keywords": [
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "StartupDevs\\Surety\\": "src"
+            "Dws\\Surety\\": "src"
         }
     }
 }

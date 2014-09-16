@@ -1,8 +1,8 @@
 <?php
 
-namespace StartupDevs\Surety\Model;
+namespace Dws\Surety\Model;
 
-use \StartupDevs\Surety\Model\Show;
+use \Dws\Surety\Model\Show;
 
 class PreviousToken extends Show
 {

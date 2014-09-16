@@ -1,6 +1,6 @@
 <?php
 
-namespace StartupDevs\Surety\Model;
+namespace Dws\Surety\Model;
 
 class Surety
 {
