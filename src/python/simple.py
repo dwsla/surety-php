@@ -63,7 +63,7 @@ import base64
 #
 def readToken(path, service):
   # build token path
-  snrpath = os.path.basename(path) + ".snr"
+  snrpath = path + ".snr"
 
   # read in binary token and encode to base64
   binary = open(snrpath, 'rb').read()
@@ -85,7 +85,7 @@ def readToken(path, service):
 # Write out the TSAToken object for the specified file. 
 #
 def writeToken(path, token):
-    snrfile = os.path.basename(path) + ".snr"
+    snrfile = path + ".snr"
     f = open(snrfile, 'wb')
     f.write(base64.b64decode(token.getASN1Token()))
     f.close()
