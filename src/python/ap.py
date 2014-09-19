@@ -99,8 +99,6 @@ class TSAService(object):
         request = urllib2.Request(url, tsaRequest.getXML())
         request.add_header("Content-type", "application/xml")
         
-        print url
-
         if self.debug:
             print url
             print tsaRequest.getXML()

@@ -26,7 +26,7 @@ class Surety implements SuretyInterface
 
     public function __construct($baseUri, $user, $pass)
     {
-        $this->baseUri = $baseUri;
+        $this->baseUri = rtrim($baseUri, '/') . '/';
         $this->user = $user;
         $this->pass = $pass;
     }
@@ -98,7 +98,7 @@ class Surety implements SuretyInterface
 
     protected function makeRequest($operation, $xml)
     {
-        $url =  rtrim($this->baseUri, '/') . '/' . ltrim($operation, '/');
+        $url = $this->baseUri . ltrim($operation, '/');
         $username = $this->user;
         $password = $this->pass;
 

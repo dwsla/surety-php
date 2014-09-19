@@ -44,11 +44,12 @@ class SuretyPython extends Surety
         $this->checkFilePath($path);
 
         $simplePy = __DIR__ . '/python/simple.py';
-
-        exec("/usr/bin/python {$simplePy} {$command} {$path} {$this->getCredentialsString()}", $output, $return);
-        if ($return) {
-            throw new SuretyException("Error executing command - error code: {$return}");
+        if(!is_executable($simplePy)){
+            throw new SuretyException("Python script is not executable");
         }
+        
+        exec("/usr/bin/python {$simplePy} {$command} {$path} {$this->getCredentialsString()}", $output, $return);
+        
         // responses have on the last element a success or a failed.
         $response = end($output);
         if(strpos($response, 'failed') !== false){
